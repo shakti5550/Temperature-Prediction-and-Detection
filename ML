@@ -1,0 +1,15 @@
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import sklearn
+from sklearn import linear_model
+Time=[[5],[10],[15],[20],[25],[30],[35]]
+Temp=[  26, 26 , 26, 26, 26, 26, 27]
+plt.scatter(Time,Temp,color='black')
+plt.xlabel("Time")
+plt.ylabel("Temp")
+reg=linear_model.LinearRegression()
+reg.fit(Time,Temp)
+X_Time=[[45]]
+print(reg.predict(X_Time))
